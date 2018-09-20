@@ -8,6 +8,8 @@ application.windows64
 application.macosx
 
 # LaTeX
+# TODO track changes to PDF or not???
+*.pdf	
 *.aux
 *.log
 *.nav
@@ -15,5 +17,3 @@ application.macosx
 *.snm
 *.toc
 *.vrb
-# TODO track changes to PDF or not???
-*.pdf	
