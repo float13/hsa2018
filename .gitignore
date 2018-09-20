@@ -9,7 +9,7 @@ application.macosx
 
 # LaTeX
 # TODO track changes to PDF or not???
-*.pdf	
+*.pdf
 *.aux
 *.log
 *.nav
