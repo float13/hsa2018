@@ -1,0 +1,391 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>{
+	\usetheme{CambridgeUS}
+	%\usecolortheme{whale}
+	\usecolortheme{dolphin}
+}
+
+\usepackage{amsmath}
+\usepackage{listings}
+%\usepackage{textcomp}
+%\usepackage[dvipsnames]{xcolor}
+%\setbeamercolor{frametitle}{fg=Brown,bg=Blue!20}
+
+%% preamble
+\title{Intro to Coding}
+\subtitle{Fall 2018 - Class 0}
+\author{Doug Brantner}
+\begin{document}
+
+\AtBeginSection[]
+{
+    \begin{frame}{Contents}
+    \tableofcontents[currentsection]
+    \end{frame}
+}
+
+%% title frame
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Contents}
+\tableofcontents
+\end{frame}
+
+
+\section{Course Overview}
+
+%\begin{frame}{Introduction}
+%\begin{itemize}
+%\item Computers can only do what you tell them to.
+%\item Turing Complete: You can make anything that's possible to make.
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Ground Rules}
+\begin{itemize}
+\item No such thing as a stupid question!
+\item Never copy/paste!
+\item Type every character of your program.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Useful Supplies}
+\begin{itemize}
+\item Notebook
+\item Pen/Pencil
+\item USB Thumb Drive to save work
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Saving Work}
+At the moment, we have 3 options:
+\begin{itemize}
+\item Desktop folder
+\item Student Shared folder
+\item USB Thumb Drive
+\end{itemize}
+You can also email your files to yourself, but this is not recommended.\\
+%\\
+Saving in at least 2 locations is recommended for a \textbf{backup}.\\
+\textbf{\textit{Always back up your work!!!}}
+\end{frame}
+
+
+\section{Quick Tour of Linux}
+\begin{frame}[fragile]{Make a New Folder}
+\begin{itemize}
+\item Open the Terminal
+\item Follow along with these commands:
+\begin{lstlisting}[language=Bash]
+>> pwd
+>> man pwd      # manual page, very helpful!!!
+>> cd ~/Desktop
+>> mkdir ____________       # new folder name
+>> cd ____________          # same name
+>> echo "Hello Linux" > hello.txt
+>> cat hello.txt
+\end{lstlisting}
+\item This folder is where you will store your projects
+\end{itemize}
+\end{frame}
+
+
+
+\section{Processing Basics}
+\begin{frame}{Processing}
+\begin{itemize}
+\item Based on Java
+\item Runs on most computers (PC, Mac, Linux)
+\item Makes graphics, animation, games, etc. super easy
+\item It's free! www.processing.org
+\item Tons of Example programs included
+\item Sometimes helpful to search for ``proce55ing''
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Hello World!}
+\begin{lstlisting}[language=Java]
+void setup() {
+    println("Hello World!");
+}
+\end{lstlisting}
+\begin{itemize}
+\item \textbf{setup} is a Function, or in Java, a \textbf{Method}
+\item \textbf{void} means that \textbf{setup} has no return value
+\item \textbf{Curly Braces} mark the beginning and end of \textbf{setup}
+\item \textbf{println} is a function called by \textbf{setup}
+\item \textbf{"Hello World!"} is a \textbf{String} argument to \textbf{println}
+\item A \textbf{semicolon} marks the end of each instruction
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Basic Structure}
+\begin{lstlisting}[language=Java]
+void setup() {
+    // Setup runs once at the beginning
+}
+
+void draw() {
+    // Draw loops infinitely
+}
+\end{lstlisting}
+\end{frame}
+
+%% normal frame
+\begin{frame}{Reserved Words}
+Reserved Words have special meanings in a Programming Language.\\
+\begin{itemize}
+\item \textbf{void} is a Java reserved word
+    \begin{itemize}
+        \item So are \textbf{int}, \textbf{float}, \textbf{double}, \textbf{String}, \textbf{for}, \textbf{while}, \textbf{if} %\textellipsis
+        %\item So are \textbf{+}, \textbf{-}, \textbf{*}, \textbf{/}, \textbf{=}
+        \item So are $\mathbf{+}, \mathbf{-}, \mathbf{*}, \mathbf{/}, \mathbf{=}$
+        \item Parenthesis (), Square Brackets [], and Curly Braces \{\} all have different special meanings.
+    \end{itemize}
+
+\item \textbf{setup} and \textbf{draw} are Processing reserved words
+    \begin{itemize}
+        \item So are \textbf{width}, \textbf{height}, \textbf{color}, \textbf{print} %\textbf{for}, \textbf{while}, and \textbf{if}
+    \end{itemize}
+\item And lots more! See the Documentation for a full list
+\item Capitalization matters!
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Variables}
+\begin{itemize}
+\item A variable is a named value. In math, $x = 10$ or $y = 98.6$\\
+\item In programming, a variable must have a datatype.
+\begin{lstlisting}[language=Java]
+    int x = 10;
+    float y = 98.6;
+    char c = 'A';
+    String s = "Hello!";
+    boolean b = true;
+\end{lstlisting}
+\item Reserved words CANNOT be used as variable names.
+\item Variable names should be descriptive. \textbf{radius} is more useful than \textbf{r}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Datatypes}
+\begin{itemize}
+\item Numbers
+    \begin{itemize}
+        \item \textbf{int:} integer numbers (no decimals) $-1, 0, 1, 2, 3, \ldots$
+        \item \textbf{float:} floating-point (decimal) numbers $3.14, 2.72, 90.7, \ldots$
+        \item \textbf{double:} bigger double-precision floating-point numbers
+        \item Numbers can be negative or positive.
+    \end{itemize}
+\item Text
+    \begin{itemize}
+        \item \textbf{char:} a single character, with single quotes 
+        \item \textbf{String:} multiple characters, with double quotes
+    \end{itemize}
+\item Logical
+    \begin{itemize}
+        \item \textbf{boolean:} a binary variable: either \textbf{true} or \textbf{false}
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]{Comments}
+\begin{itemize}
+\item Comments are notes to yourself, to explain what the code is doing
+\begin{lstlisting}[language=Java]
+    // This is a comment.
+    
+    /*   This is a 
+     *   multi-
+     *   line
+     *   comment
+     */
+\end{lstlisting}
+\item Comments are ignored by the compiler
+\item Comments are also useful for temporarily disabling parts of code
+    \begin{itemize}
+        \item This is useful for debugging
+    \end{itemize}
+\item Write lots of comments! You'll thank yourself later!
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Printing to the Console}
+\begin{itemize}
+\item The \textbf{print} and \textbf{println} methods print text to the console, at the bottom of the Processing window
+    \begin{itemize}
+    \item \textbf{print} always continues on the same line
+    %\item \textbf{println} always ends with an invisible \textbf{newline \textquotesingle \textbackslash n \textquotesingle} character, so any following statement will start on a new line
+    \item \textbf{println} always ends with an invisible \textbf{newline \textbackslash n} character, so any following statement will start on a new line
+    %\item \textbf{println} always ends with an invisible \begin{verbatim}newline '\n'\end{verbatim} character, so any following statement will start on a new line
+    \end{itemize}
+\item These are \textit{very} useful for debugging
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Functions in Math}
+In math, a function takes an input, does something to it, and returns a value.\\
+First, we have to define our function:
+$$f(x) = 2x$$
+Then we can assign the return value to a new variable $y$
+$$y = f(x)$$
+% TODO numeric examples w/ "pause" in between
+\end{frame}
+
+\begin{frame}{Black Box Functions}
+A function can also be thought of as a \textbf{black box}. This means that we know the inputs and the outputs, but we may not know exactly what happens on the inside.\\
+For example, a washing machine takes an input of dirty clothes, washes them, and then returns clean clothes.
+$$ \text{wetClothes} = \text{washer}(\text{dirtyClothes})$$
+Likewise, a dryer takes in wet clothes, dries them, and returns dry clothes.
+$$ \text{cleanClothes} = \text{dryer}(\text{wetClothes})$$
+We know how to use the machines, even if we don't know how they work on the inside.
+\end{frame}
+
+% TODO delete this?
+\begin{frame}{Functions II}
+We can combine multiple functions in one line of code.
+$$  y = f(x) $$
+$$  z = g(y) $$
+is equivalent to writing
+$$  z = g(f(x))    $$
+This allows us to eliminate an intermediate variable
+$$ \text{cleanClothes} = \text{dryer}(\text{washer}(\text{dirtyClothes}))$$
+But at the expense of being harder to read.
+\end{frame}
+
+\begin{frame}[fragile]{Java Functions: \textit{Methods}}
+Functions are the basic building blocks of code. In Java, they are called \textbf{methods}, and in other languages they are called sub-routines.
+\begin{lstlisting}[language=Java]
+// this function takes no arguments 
+// and returns no values
+void setup() {
+    size(640, 320);
+}
+
+// this function takes an integer argument,
+// then returns its square
+int square(int x) { 
+    return x*x;     
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Arguments and Return Values}
+Many functions accept \textbf{input parameters} or \textbf{arguments}. These are variables that are passed to the function when it is called.
+\begin{lstlisting}[language=Java]
+void setup() {  // No input parameters
+    int y = square(10);     // now y == 100
+}
+
+int square(int x) {   // 1 integer input
+    return x*x;       // returns an integer
+}
+\end{lstlisting}
+Many functions also \textbf{return} values. The return datatype is specified in the function definition.
+\end{frame}
+
+
+\begin{frame}[fragile]{Void Methods}
+A method that does not return a value is called a \textbf{void} method.
+\begin{lstlisting}[language=Java]
+void setup() {
+    size(320, 640);
+}
+
+void draw() {
+    // lots of fun stuff happens here
+}
+\end{lstlisting}
+Void methods are just as powerful as other functions; they just don't need to return anything when they're done.
+\end{frame}
+
+
+\begin{frame}[fragile]{Variable Scope}
+\begin{itemize}
+% TODO add a global var for example
+\item The curly braces $\{\ldots\}$ mark the beginning and end of the method, or the \textbf{scope} of the method.
+\begin{lstlisting}[language=Java]
+int triple(int x) {
+    int y = 3*x;
+    return y;
+}
+\end{lstlisting}
+%\item $x$ is an \textbf{argument} or \textbf{parameter} that is passed to the method.
+\item $y$ is a \textbf{local} variable. It is defined within the \textbf{scope} of the method.
+\item Both $x$ and $y$ are only visible within the \textbf{scope} of the method. They are not accessible anywhere else in the program.
+\item When the method finishes, the value of $y$ is returned, and $y$ itself disappears.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Global Variables}
+\begin{itemize}
+\item Global variables are defined outside of any method. Therefore, \textbf{every} method can see them.
+\item And every method can also \textbf{modify} them.
+    \begin{itemize}
+        \item This can be very useful, but also very dangerous
+        \item Take care when deciding if a variable should be global or not
+    \end{itemize}
+\begin{lstlisting}[language=Java]
+int p, q;
+
+void setup() {
+    p = 100;
+    q = p;
+    size(p, q);
+}
+
+void draw() {
+    if (p == q) { ... do something fun ... }
+}
+
+\end{lstlisting}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{For Loop}
+A \textbf{for} loop executes a specific number of times.
+\begin{lstlisting}[language=Java]
+for (int i = 0; i < 10; i++) {
+    // do something ten times...
+}
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{While Loop}
+A \textbf{while} loop can run for an unknown number of loops.\\
+You are responsible to \textbf{create and update} the loop variable.
+\begin{lstlisting}[language=Java]
+int i = 0;
+while (i < 10) {
+    // do something here...
+    i++;    // this is very important!!
+}
+
+\end{lstlisting}
+An \textbf{infinte loop} happens when the test criteria is never true.\\
+\textbf{This is a very common bug!}
+\end{frame}
+
+\section{End}
+\begin{frame}{Homework!}
+\begin{itemize}
+\item Download Processing (www.processing.org)
+    \begin{itemize}
+    \item You may need to install some Java dependencies too
+    \item Let me know if you need help
+    \end{itemize}
+\item Try to run some of the examples, look for interesting ones
+\item Look through the Tutorials \& Videos
+\item Start thinking about project ideas
+\end{itemize}
+\end{frame}
+
+\end{document}
+
