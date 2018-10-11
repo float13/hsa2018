@@ -1,4 +1,25 @@
-# "Intro to Coding" Class Resources
+# "Intro to Coding" Class
+## Harlem School of the Arts, Fall 2018
+### Instructor: Doug Brantner
+
+## General Resources
+Download Processing: www.processing.org  
+- See their Tutorials, Reference, Examples, and Videos
+
+**For Help:**
+1. Try looking at the [Processing Reference](https://processing.org/reference/). This should always be your first stop.
+2. Try searching online for your question. Copying/Pasting error messages word-for-word can be helpful.
+  - **However**, copying/pasting variable names that are specific to your program might hurt your results. Try to keep it as generic as possible.
+  - Try searching for "proce55ing" instead of "processing". This helps sometimes because "processing" is such a common word.
+  -  www.stackoverflow.com may pop up frequently, and is a great website.
+3. Any general Java help should work for Processing.
+4. If all else fails, write down your question, and bring it to class, or send it to the mailing list.
+  - Please *don't* send me technical questions directly. Send them to the whole class, so everyone can pitch in and learn.
+
+**NOTE:** Remember, **Java != JavaScript**  
+(Java is **_not_** the same as JavaScript so be careful when searching for help online)
+
+# Class Notes
 
 ## Class00 - Intro to Java and Processing
 2018_09_19  
@@ -124,14 +145,7 @@ if ("abc" != "def") {
 2018_10_17 - TBD
 
 
-## Resources
-Download Processing: www.processing.org  
-See their Tutorials, Reference, Examples, and Videos
 
-Help: www.stackoverflow.com
-
-Remember, Java != JavaScript  
-(Java is **_not_** the same as JavaScript so be careful when searching for help online)
 
 ### Other
 All code, materials, slides, documentation, etc. posted here is Copyright 2018 Douglas Brantner until further notice (until I can wrap my head around and choose a proper Open Source license)
