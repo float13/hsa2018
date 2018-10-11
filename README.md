@@ -53,7 +53,7 @@ In other words, only the first true case gets executed, and the rest are skipped
 
 A **boolean** variable can only have 2 values: *true* or *false*.  
 These translate to 1's and 0's inside the computer.  
-We can use **Boolean operators** with Boolean variables, just like we use the ```+, -, *, and /``` operators to do math with numbers.  
+We can use **Boolean operators** with Boolean variables, just like we use the familiar math operators ```+, -, *, /```  to do things with numbers.  
 ### AND &&
 The AND operator takes 2 inputs, and returns true *if and only if* **both** of them are true:
 ```java
@@ -62,6 +62,7 @@ if (input1 && input2) {
 }
 ```
 A *Truth Table* takes every possible combination of inputs (in our case, 4 possible combinations), and gives the result for each one. The Truth Table for the AND operator ```&&``` in the above code looks like this:  
+**Truth Table for AND ```&&```**  
 
 input1 | input2 | Result
 ---    | ---    | ---
@@ -77,6 +78,8 @@ if (input1 || input2) {
   // do something if EITHER one is true
 }
 ```  
+**Truth Table for OR ```||```**  
+
 input1 | input2 | Result
 ---    | ---    | ---
 true   | false  | true
@@ -86,8 +89,10 @@ true   | true   | true
 
 Note that the AND operator results in ```true``` in only 1 case, while the OR operator results in ```true``` in 3 out of 4 cases.
 
+***Bug Alert:*** The single ```&``` and single ```|``` are also valid operators, with very similar but very different effects. Make sure you always use the double ```&&``` and ```||``` operators for this class!  
+
 ### NOT !
-The NOT operator gives the *opposite* value of the input. In other words, it *negates*, or *flips* the value.  
+The NOT operator ```!``` gives the *opposite* value of the input. In other words, it *negates*, or *flips* the value.  
 It is a *unary operator*, meaning it only takes **one input**, unlike AND and OR.  
 We put the ```!``` in **front** of the value we want to negate:
 ```java
@@ -95,7 +100,8 @@ if (!input1) {
   // execute this code ONLY if input1 is FALSE.
 }
 ```
-Since we only have 1 input, the truth table is much simpler:
+Since we only have 1 input, the truth table is much simpler:  
+**Truth Table for NOT ```!```**  
 
 input1 | Result
 ---    | ---
