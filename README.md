@@ -53,7 +53,7 @@ In other words, only the first true case gets executed, and the rest are skipped
 
 A **boolean** variable can only have 2 values: *true* or *false*.  
 These translate to 1's and 0's inside the computer.  
-We can use **Boolean operators** with Boolean variables, just like we use the ```+, -, *, and /``` operators to do math with numbers.
+We can use **Boolean operators** with Boolean variables, just like we use the ```+, -, *, and /``` operators to do math with numbers.  
 ### AND &&
 The AND operator takes 2 inputs, and returns true *if and only if* **both** of them are true:
 ```java
@@ -61,7 +61,7 @@ if (input1 && input2) {
   // do something here if BOTH are true
 }
 ```
-The *Truth Table* for the above code looks like this:  
+A *Truth Table* takes every possible combination of inputs (in our case, 4 possible combinations), and gives the result for each one. The Truth Table for the AND operator ```&&``` in the above code looks like this:  
 
 input1 | input2 | Result
 ---    | ---    | ---
@@ -70,8 +70,8 @@ false  | true   | false
 false  | false  | false
 true   | true   | **true**
 
-### OR
-The OR operator also takes 2 inputs, but now we only need *at least* **one** of them to be true:
+### OR ||
+The OR operator ```||``` also takes 2 inputs, but now we only need *at least* **one** of them to be true:
 ```java
 if (input1 || input2) {
   // do something if EITHER one is true
