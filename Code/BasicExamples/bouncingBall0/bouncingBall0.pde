@@ -3,66 +3,82 @@
 *    Bouncing Ball Example
 *    Processing 3/Java
 *    9/12/18
+*
+*    Update - 10/12/18  - change variable names to match class
+*						- update comments
 */  
 
-// Global Variables
+/*
+ * Global Variables
+ * These can be seen by ALL functions
+ */
 
 // User-Editable Globals
-int diameter = 25;       // diameter of ball
-int vx = 1;              // velocity in x direction
-int vy = 1;              // velocity in y direction
-int vs = 1;              // speed multiplier
+// These make it easy for the programmer to change cool things
+int diameter = 25;		// diameter of ball
+int speedX = 2;			// speed in X direction
+int speedY = 2;			// speed in Y direction
 
-//  Other Globals
-int bx0, bx1, by0, by1;  // screen boundaries  
-int px, py;              // ball position x,y
+//  Other Globals:
+//  These should not be touched by the user - they only have meaning inside the program.
+int xBoundLeft, xBoundRight, yBoundTop, yBoundBottom; // virtual boundaries for correct bounce
+int posX, posY;	// ball position X and Y
 
+/*	Processing Built-In Methods
+ *	setup() and draw() are both special methods in Processing
+ *	The compiler looks for both of them, and each has a specific purpose
+ */
 
-// Setup method runs once at beginning  
 void setup() {
+  // The setup() method runs once at beginning  
   size(640, 320); // set window size
   
-  px = width / 2;  // start ball in center of screen
-  py = height / 2;
+  posX = width / 2;  // start ball in center of screen
+  posY = height / 2;
   
-  bx1 = width - diameter/2;  // set boundaries
-  by1 = height - diameter/2;
-  bx0 = by0 = diameter/2;
+  xBoundRight = width - diameter/2;  // set boundaries
+  yBoundBottom = height - diameter/2;
+  xBoundLeft = yBoundTop = diameter/2;
   
-  vx *= vs;  // apply speed multiplier
-  vy *= vs;
-  
-  background(255);  // set background to white
+  background(255);  // set background color
   
   println("Ready.");
 }
 
-// Draw method repeats continuously in an infinite loop
 void draw() {  
+  // The draw() method runs continuously forever, until the program stops
   background(255);  // clear screen
   
-  ellipse(px, py, diameter, diameter);  // draw ball
+  ellipse(posX, posY, diameter, diameter);  // draw ball
 
   update_position();
   check_bounds();
 }
 
+/*	SUPPORTING METHODS
+ *	We make these up ourselves, and they only run when we call them.
+ */
 
-// Supporting Methods are called as necessary
 void update_position() {
-  px += vx;  // same as px = px + vx
-  py += vy;
+  // Update the position of the ball, using its speed
+
+  posX += speedX;  // same as posX = posX + speedX
+  posY += speedY;
 }
 
 void check_bounds() {
   // check if ball hits any wall
   // then flip x/y direction if necessary
-  
-  if (px <= bx0 || px >= bx1) { // check left/right walls
-    vx *= -1;
+  // the direction is represented by the sign of the speed (+ or -)
+
+  // check left/right walls
+  if (posX <= xBoundLeft || posX >= xBoundRight) {
+    speedX *= -1;	// same as "speedX = speedX * -1"
+					// also same as "speedX = -speedX"
   }
-  
-  if (py <= by0 || py >= by1) { // check top/bottom walls
-    vy *= -1;
+
+  // check top/bottom walls 
+  if (posY <= yBoundTop || posY >= yBoundBottom) {
+    speedY *= -1;
   }
 }
