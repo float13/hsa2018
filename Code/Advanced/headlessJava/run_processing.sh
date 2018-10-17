@@ -4,6 +4,8 @@
 # from the command line
 # to write & run Processing sketches without the IDE
 
+# TODO - make sed/awk script to re-format Processing .pde file automatically?
+
 # NOTE - User must change path to Processing core.jar
 proc3core="/Applications/Processing 2.app/Contents/Java/core/library/core.jar"
 myfile="$1"	# input filename to compile
