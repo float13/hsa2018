@@ -4,6 +4,8 @@
 *    Processing 3/Java
 *    9/12/18
 *
+*    Version 00
+*
 *    Update - 10/12/18  - change variable names to match class
 *                       - update comments
 */  
