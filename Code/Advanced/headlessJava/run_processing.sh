@@ -27,22 +27,26 @@ echo "Compiling..."
 javac -cp "$proc3core" "$myfile"
 errcode=$?
 
-classFile=""
+className=""
 if [ $errcode == 0 ]; then
-	echo "Successful."
-	classFile="$(basename "$myfile" ".java")"	# NO extension (actual file is *.class)
+	echo "Compiling Successful."
+	className="$(basename "$myfile" ".java")"	# classname WITHOUT extension
+	classFile="$className.class"	# with Extension
 	echo "Output File: "$classFile""
 else
 	echo "Error during compilation."
 	exit 1
 fi
 
-if [ ! -e "$classFile.class" ]; then
+if [ ! -e "$classFile" ]; then
 	echo "Error: Output .class file does not exist."
 	exit 1
 fi
 
 # Run program if successful:
 # TODO move this/make a separate input flag for it
-java -cp ".:$proc3core" "$classFile"
+echo "<<<< BEGIN PROCESSING PRINT OUTPUT >>>>"
+java -cp ".:$proc3core" "$className"
+echo "<<<< END PROCESSING PRINT OUTPUT >>>>"
+echo
 # NOTE: on Windows, classpath separator is ";" (semicolon)
