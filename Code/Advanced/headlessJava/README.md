@@ -18,8 +18,10 @@ This will compile **and** run the Processing sketch ```filename.java``` from the
 - Probably need Processing Source Code core.jar (and possibly more)
 
 
-## References:
-[1]: https://stackoverflow.com/questions/38104841/processing-in-java-without-ide
+## References: 
+- https://stackoverflow.com/questions/38104841/processing-in-java-without-ide  
 
 See Also:  
-<https://stackoverflow.com/questions/14787093/how-to-run-processing-applications-from-the-terminal>
+- https://stackoverflow.com/questions/14787093/how-to-run-processing-applications-from-the-terminal
+
+[1]: https://stackoverflow.com/questions/38104841/processing-in-java-without-ide
