@@ -7,6 +7,9 @@ application.windows32
 application.windows64
 application.macosx
 
+# Java
+*.class
+
 # LaTeX
 #*.pdf
 *.aux
