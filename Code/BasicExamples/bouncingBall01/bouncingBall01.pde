@@ -19,7 +19,7 @@
  */
 
 // User-Editable Globals
-
+// These make it easy for the programmer to change interesting things
 int diameter = 40;    // diameter of ball
 int speedX = 2;       // speed in X direction
 int speedY = 2;       // speed in Y direction
