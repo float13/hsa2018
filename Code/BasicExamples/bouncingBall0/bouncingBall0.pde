@@ -5,7 +5,7 @@
 *    9/12/18
 *
 *    Update - 10/12/18  - change variable names to match class
-*						- update comments
+*                       - update comments
 */  
 
 /*
@@ -15,18 +15,18 @@
 
 // User-Editable Globals
 // These make it easy for the programmer to change cool things
-int diameter = 25;		// diameter of ball
-int speedX = 2;			// speed in X direction
-int speedY = 2;			// speed in Y direction
+int diameter = 25;    // diameter of ball
+int speedX = 2;       // speed in X direction
+int speedY = 2;       // speed in Y direction
 
 //  Other Globals:
 //  These should not be touched by the user - they only have meaning inside the program.
 int xBoundLeft, xBoundRight, yBoundTop, yBoundBottom; // virtual boundaries for correct bounce
-int posX, posY;	// ball position X and Y
+int posX, posY;  // ball position X and Y
 
-/*	Processing Built-In Methods
- *	setup() and draw() are both special methods in Processing
- *	The compiler looks for both of them, and each has a specific purpose
+/*  Processing Built-In Methods
+ *  setup() and draw() are both special methods in Processing
+ *  The compiler looks for both of them, and each has a specific purpose
  */
 
 void setup() {
@@ -55,8 +55,8 @@ void draw() {
   check_bounds();
 }
 
-/*	SUPPORTING METHODS
- *	We make these up ourselves, and they only run when we call them.
+/*  SUPPORTING METHODS
+ *  We make these up ourselves, and they only run when we call them.
  */
 
 void update_position() {
@@ -73,8 +73,8 @@ void check_bounds() {
 
   // check left/right walls
   if (posX <= xBoundLeft || posX >= xBoundRight) {
-    speedX *= -1;	// same as "speedX = speedX * -1"
-					// also same as "speedX = -speedX"
+    speedX *= -1; // same as "speedX = speedX * -1"
+                  // also same as "speedX = -speedX"
   }
 
   // check top/bottom walls 
