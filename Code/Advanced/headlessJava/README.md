@@ -2,6 +2,8 @@
 ### Doug Brantner 10/17/18
 - Testing using Processing core library **without** Processing IDE
 - Using only system Java runtime and Processing core 
+- **NOTE** Requires special formatting of the ```.java``` file which is **different** from how a normal Processing ```.pde``` file looks.
+  - See [Reference][1] below
 
 ## Usage:
 This will compile **and** run the Processing sketch ```filename.java``` from the Mac/Linux command line:
@@ -17,7 +19,7 @@ This will compile **and** run the Processing sketch ```filename.java``` from the
 
 
 ## References:
-<https://stackoverflow.com/questions/38104841/processing-in-java-without-ide>
+[1]<https://stackoverflow.com/questions/38104841/processing-in-java-without-ide>
 
-See Also:
+See Also:  
 <https://stackoverflow.com/questions/14787093/how-to-run-processing-applications-from-the-terminal>
