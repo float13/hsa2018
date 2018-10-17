@@ -65,7 +65,7 @@ void draw() {
   check_bounds();
 }
 
-/***********  SUPPORTING METHODS ***********
+/***********  OTHER METHODS ***********
  *  We can also write our own methods, and call them whenever we need them.
  */
 
