@@ -158,7 +158,7 @@ TODO example w/ equals sign & double arrow
 **However**, in programming, the equal sign is a one-way operator. We have to think about it a little differently, as a **one-way arrow**.  
 TODO example w/ left-hand arrow
 
-The important thing to remember here is that the Left-Hand-Side and the Right-Hand-Side are *no longer equivalent!.* That means that we can't swap the Left-Hand-Side and the Right-Hand-Side any more - it completele changes the meaning of the programming instruction!
+The important thing to remember here is that the Left-Hand-Side and the Right-Hand-Side are *no longer equivalent!.* That means that we can't swap the Left-Hand-Side and the Right-Hand-Side any more - it completely changes the meaning of the programming instruction!
 ```java
 int A = 10;
 int B = 5;
@@ -167,14 +167,14 @@ A = B;  // here, we assign the value of B to the variable named A
 ```
 The result of the above code is that ```A = 5```.  
   
-However, if we switch the Left-Hand-Side ```A``` and Right-Hand-Side ```B```, we get a **different** result:
+However, if we change it from ```A = B``` to ```B = A```, the result is different!  
+Note that we reset the values of ```A``` and ```B``` to their original values to start.  
 ```java
 int A = 10;
 int B = 5;
 
 B = A;  // here, we assign the value of A to the variable named B
 ```
-First, note that we reset the values of ```A``` and ```B``` to their original values to start.  
 Now, the result is that ```B = 10```, because the **equal sign Assignment Operator** is a **one-way** operator. Always think about is as an **"Arrow Pointing to the Left"!**
 
 ## Next Class - Class05
