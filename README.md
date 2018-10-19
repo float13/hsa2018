@@ -175,7 +175,10 @@ int B = 5;
 
 B = A;  // here, we assign the value of A to the variable named B
 ```
-Now, the result is that ```B = 10```, because the **equal sign Assignment Operator** is a **one-way** operator. Always think about is as an **"Arrow Pointing to the Left"!**
+Now, the result is that ```B = 10```, because the **equal sign Assignment Operator** is a **one-way** operator.  
+So for the first example ```A = B```, we **don't** say "A is equal to B". Instead, we have to say "Assign the value of B to A".
+
+
 
 ## Next Class - Class05
 2018_10_24 - TBD
