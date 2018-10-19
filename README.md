@@ -164,6 +164,8 @@ int A = 10;
 int B = 5;
 
 A = B;  // here, we assign the value of B to the variable named A
+
+// RESULT: The value of A is now 5.
 ```
 The result of the above code is that ```A = 5```.  
   
@@ -174,6 +176,8 @@ int A = 10;
 int B = 5;
 
 B = A;  // here, we assign the value of A to the variable named B
+
+// RESULT: The value of B is now 10.
 ```
 Now, the result is that ```B = 10```, because the **equal sign Assignment Operator** is a **one-way** operator.  
 So for the first example ```A = B```, we **don't** say "A is equal to B". Instead, we have to say "Assign the value of B to A".
