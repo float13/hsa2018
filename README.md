@@ -144,12 +144,12 @@ if ("abc" != "def") {
 ## Class04 - Functions and Methods
 2018_10_17
 
-### Functions and Methods
+### Functions and Methods, Assignment Operator
 See the **Slides, pages 18-25**  
 - [View Online](Slides/Class00/helloworld.pdf) or  
 - [Download](https://github.com/float13/hsa2018/raw/master/Slides/Class00/helloworld.pdf)
 
-### Assignment Operator
+### Assignment Operator =
 In Java, and many other programming languages, the **single equal sign** ```=``` is used as the **Assignment Operator**.  
 This is a little different than the usual way we think about it in math.  
 In math, we usually think of the equal sign as "going both ways" - meaning the **Left-Hand-Side** is equivalent to the **Right-Hand-Side**:  
