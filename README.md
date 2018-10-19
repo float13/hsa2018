@@ -167,7 +167,7 @@ A = B;  // here, we assign the value of B to the variable named A
 
 // RESULT: The value of A is now 5.
 ```
-The result of the above code is that ```A = 5```.  
+The result of the above code is that A is now equal to 5.  
   
 However, if we change it from ```A = B``` to ```B = A```, the result is different!  
 Note that we reset the values of ```A``` and ```B``` to their original values to start.  
@@ -179,8 +179,10 @@ B = A;  // here, we assign the value of A to the variable named B
 
 // RESULT: The value of B is now 10.
 ```
-Now, the result is that ```B = 10```, because the **equal sign Assignment Operator** is a **one-way** operator.  
-So for the first example ```A = B```, we **don't** say "A is equal to B". Instead, we have to say "Assign the value of B to A".
+Now, the result is that B is equal to 10, because the **equal sign Assignment Operator** is a **one-way** operator.  
+  
+So we have to change the way we think a little bit, and start to think like a programmer- 
+for the first example ```A = B```, we **don't** say "A is equal to B". Instead, we have to say "Assign the value of B to A".
 
 
 
