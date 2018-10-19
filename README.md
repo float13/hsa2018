@@ -141,11 +141,44 @@ if ("abc" != "def") {
   // this block also get executed, because the 2 strings are not equal.
 }  
 ```
-## Class04
-2018_10_17 - TBD
+## Class04 - Functions and Methods
+2018_10_17
 
+### Functions and Methods
+See the **Slides, pages 18-25**  
+- [View Online](Slides/Class00/helloworld.pdf) or  
+- [Download](https://github.com/float13/hsa2018/raw/master/Slides/Class00/helloworld.pdf)
 
+### Assignment Operator
+In Java, and many other programming languages, the **single equal sign** ```=``` is used as the **Assignment Operator**.  
+This is a little different than the usual way we think about it in math.  
+In math, we usually think of the equal sign as "going both ways" - meaning the **Left-Hand-Side** is equivalent to the **Right-Hand-Side**:  
+TODO example w/ equals sign & double arrow
 
+**However**, in programming, the equal sign is a one-way operator. We have to think about it a little differently, as a **one-way arrow**.  
+TODO example w/ left-hand arrow
+
+The important thing to remember here is that the Left-Hand-Side and the Right-Hand-Side are *no longer equivalent!.* That means that we can't swap the Left-Hand-Side and the Right-Hand-Side any more - it completele changes the meaning of the programming instruction!
+```java
+int A = 10;
+int B = 5;
+
+A = B;  // here, we assign the value of B to the variable named A
+```
+The result of the above code is that ```A = 5```.  
+  
+However, if we switch the Left-Hand-Side ```A``` and Right-Hand-Side ```B```, we get a **different** result:
+```java
+int A = 10;
+int B = 5;
+
+B = A;  // here, we assign the value of A to the variable named B
+```
+First, note that we reset the values of ```A``` and ```B``` to their original values to start.  
+Now, the result is that ```B = 10```, because the **equal sign Assignment Operator** is a **one-way** operator. Always think about is as an **"Arrow Pointing to the Left"!**
+
+## Next Class - Class05
+2018_10_24 - TBD
 
 ### Other
 All code, materials, slides, documentation, etc. posted here is Copyright 2018 Douglas Brantner until further notice (until I can wrap my head around and choose a proper Open Source license)
