@@ -185,9 +185,32 @@ So we have to change the way we think a little bit, and start to think like a pr
 for the first example ```A = B```, we **don't** say "A is equal to B". Instead, we have to say "Assign the value of B to A".
 
 
+## Class05 - More on Functions, Variable Scope
+2018_10_24
 
-## Next Class - Class05
-2018_10_24 - TBD
+## Class06 - How Computers Work
+2018_10_31
+
+### Basic Components
+- CPU: Central Processing Unit
+  - Speed is measured in Hertz (Hz), meaning "cycles per second"
+  - 1 GHz processer can perform 1 billion instructions per second
+- RAM: Random Access Memory
+  - Faster than the Hard Disk, but much smaller capacity
+  - Volatile: all data in RAM is lost when power is turned off
+- Hard Disk
+  - Very large capacity (used to be several Gigabytes, now several Terabytes)
+  - Slow Read/Write (too slow to run programs directly from disk)
+  - Non-volatile: data can be stored long-term while computer is off  
+    **Note:** *Non-volatile does not mean "fail-safe" - always make backups of your data!*
+- I/O: Input/Output
+  - Keyboard
+  - Mouse
+  - Screen
+  - Speakers
+
+## Next Class - Class07
+2018_11_07 - TBD
 
 ### Other
 All code, materials, slides, documentation, etc. posted here is Copyright 2018 Douglas Brantner until further notice (until I can wrap my head around and choose a proper Open Source license)
