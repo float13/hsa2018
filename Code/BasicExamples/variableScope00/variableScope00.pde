@@ -23,7 +23,9 @@
  *    Why, or why not?
  */
 
-int x = 123;  // global variable
+
+int x = 123;  // global variable (declared OUTSIDE of any function)
+
 
 void setup() {
   foo();
