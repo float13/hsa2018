@@ -213,8 +213,9 @@ for the first example ```A = B```, we **don't** say "A is equal to B". Instead, 
 2018_11_07
 
 ### Variables
-Before you can use a variable, you must **declare** it. You do this by giving it a **name** and a **datatype**.
+Before you can use a variable, you must **declare** it. You do this by giving it a **datatype** and a **name**.
 ```java
+// Variable Declarations:
 int x;
 int speed;
 float y1;
@@ -222,15 +223,21 @@ String s;
 boolean flag;
 ```
 - A variable can have any name, as long as it starts with a letter, and is not a **reserved word**.  
-- Variables **must** be declared with their **datatype** first. This tells the compiler how much space to reserve in memory.
+- Variables **must** be declared with their **datatype** first, before you can use the variable. This tells the compiler how much space to reserve in memory.
   - For example, in Java, an ```int``` takes up 32 bits, or 4 bytes of memory.
   - For larger numbers, you can use ```long```, which is 64 bits (or 8 bytes).
 - The **datatype** also helps prevent errors (bugs).
   - The compiler will throw an error if you try to mix datatypes, or if you try to do something that isn't supported (for example, if you try to add 2 boolean variables).
 
+Now that the compiler knows about your variable, you can **access** its value, or **modify** its value:
+```java
+println(x);		// access - for example, print the value of x
+x = 100;		// modify - change the value of x
+```
+
 ### Variable Scope
 
-The **scope** of a variable refers to its visibility, or which functions/methods can "see" it.  
+The **scope** of a variable refers to its visibility, or which functions/methods can "see" it. In order to **access** or **modify** the variable, it must be within the scope of the code making the access or modification.
 - A **local variable** is declared **inside** a method, and is *only* visible within that method.
 - A **global variable** is declared **outside** of any method (usually at the beginning of the program), and is visible to **all** methods.
   - **Bug Warning:** Global variables can also be **changed** by any method, so you must be careful when modifying them.
@@ -251,10 +258,10 @@ int x;	// this variable is GLOBAL
 		// because it is declared outside of any function
 
 void setup() {
-	x = 1000;	// this sets the value of the global variable
+	x = 1000;	// this modifies value of the global variable
 	foo();
 	bar();
-	println(x);
+	println(x);	// this accesses the value of the global variable
 }
 
 void foo() {
@@ -268,7 +275,7 @@ void bar() {
 }
 ```
 
-*Note:* These 3 ```x``` variables are *not* copies of each other. They each have their own separate place in the memory (RAM).
+*Note:* These 3 ```x``` variables are *not* copies of each other. They each have their own separate place in the memory (RAM). Otherwise, they could not store different values.
 
 ## Class08 - TBD
 2018_11_14
