@@ -209,8 +209,71 @@ for the first example ```A = B```, we **don't** say "A is equal to B". Instead, 
   - Screen
   - Speakers
 
-## Next Class - Class07
-2018_11_07 - TBD
+## Class07 - Local/Global Scope
+2018_11_07
+
+### Variables
+Before you can use a variable, you must **declare** it. You do this by giving it a **name** and a **datatype**.
+```java
+int x;
+int speed;
+float y1;
+String s;
+boolean flag;
+```
+- A variable can have any name, as long as it starts with a letter, and is not a **reserved word**.  
+- Variables **must** be declared with their **datatype** first. This tells the compiler how much space to reserve in memory.
+  - For example, in Java, an ```int``` takes up 32 bits, or 4 bytes of memory.
+  - For larger numbers, you can use ```long```, which is 64 bits (or 8 bytes).
+- The **datatype** also helps prevent errors (bugs).
+  - The compiler will throw an error if you try to mix datatypes, or if you try to do something that isn't supported (for example, if you try to add 2 boolean variables).
+
+### Variable Scope
+
+The **scope** of a variable refers to its visibility, or which functions/methods can "see" it.  
+- A **local variable** is declared **inside** a method, and is *only* visible within that method.
+- A **global variable** is declared **outside** of any method (usually at the beginning of the program), and is visible to **all** methods.
+  - **Bug Warning:** Global variables can also be **changed** by any method, so you must be careful when modifying them.
+
+This example has 3 different variables with the same name ```x```. The first one is global, and is visible to all methods. 
+However, the ```foo()``` and ```bar()``` methods each **declare** their own **local** variable, also named ```x```.  
+How does the compiler resolve this naming conflict?  
+- The compiler first searches for a **local** variable inside a function.
+- If it doesn't find a local variable, then it searches outside the function in the **global namespace**.
+
+So in this example, ```foo()``` and ```bar()``` each print the value of their own local variable named ```x```, and ```setup()``` both modifies and prints the value of the global ```x```. 
+
+So if we trace through this program, what will it print out???
+
+```java
+
+int x;	// this variable is GLOBAL
+		// because it is declared outside of any function
+
+void setup() {
+	x = 1000;	// this sets the value of the global variable
+	foo();
+	bar();
+	println(x);
+}
+
+void foo() {
+	int x = 13;	// this variable is LOCAL to the "foo" method
+	println(x);
+}
+
+void bar() {
+	int x = 81;	// this variable is LOCAL to the "bar" method
+	println(x);
+}
+```
+
+*Note:* These 3 ```x``` variables are *not* copies of each other. They each have their own separate place in the memory (RAM).
+
+## Class08 - TBD
+2018_11_14
+
+
 
 ### Other
 All code, materials, slides, documentation, etc. posted here is Copyright 2018 Douglas Brantner until further notice (until I can wrap my head around and choose a proper Open Source license)
