@@ -285,6 +285,7 @@ void bar() {
 void myFunc(int x) {		// this x is local to the myFunc method
 	println(x);	
 }
+```
 
 ## Class08 - TBD
 2018_11_14
