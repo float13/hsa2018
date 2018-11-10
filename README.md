@@ -275,7 +275,16 @@ void bar() {
 }
 ```
 
-*Note:* These 3 ```x``` variables are *not* copies of each other. They each have their own separate place in the memory (RAM). Otherwise, they could not store different values.
+*Note:* These 3 ```x``` variables are *not* copies of each other. They each have their own separate place in the memory (RAM). Otherwise, they could not store different values.  
+- Local variables are created in memory when a method is called, and they are erased as soon as the method ends. 
+- If a method is called more than once, a new copy is created and destroyed each time the method runs.
+- Global variables stay in memory for the entire time the program is running.
+
+**Input arguments** are also **local** to a function:
+```java
+void myFunc(int x) {		// this x is local to the myFunc method
+	println(x);	
+}
 
 ## Class08 - TBD
 2018_11_14
