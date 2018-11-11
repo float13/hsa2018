@@ -42,12 +42,13 @@ Following the example from http://processingjs.org/learning/, from the **Using P
 ## Troubleshooting
 #### Check File Extensions
 You must be able to save your text files with **explicit** file extensions. Sometimes your OS might hide file extensions - try to enable displaying full filenames with extensions on your OS.
-- You want to see the full filename ```test.html```, not just ```test```.
+- You want to see the full filename ```test.html```, not just ```test```
 - Something like ```test.html.txt```, ```test.html.rtf```, ```test.html.docx```, etc. will **not** work.
 
 #### If you open your ```test.html``` page and just see a blank page:
   1. Make sure your Processing code ```anything.pde``` is valid and working (test it with Processing)
-  2. Make sure all 3 files are in the same folder:
+    - Try using the simplest example possible, or use the code from the ProcessingJS Learning example.
+  2. Make sure all 3 files are in the same folder:  
     - Your Processing file ```anything.pde```
     - Your ```test.html``` web page file
     - The ```processing.min.js``` file
