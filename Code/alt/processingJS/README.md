@@ -26,7 +26,7 @@ Following the example from http://processingjs.org/learning/, from the **Using P
 5. Rename your Processing file to ```anything.pde``` to match the example code, if the name is different.
 6. Create a new plaintext file named ```test.html``` (the ProcessingJS tutorial calls this "anything.html" but I am changing the name to make it simpler). The file will have only 2 lines - copy these lines 2 lines and save the file as ```test.html```:
 ```html
-<script src="processing.js"></script> 
+<script src="processing.min.js"></script> 
 <canvas data-processing-sources="anything.pde"></canvas>
 ```
   - The string ```"anything.pde"``` **must** match the filename of your Processing file (case sensitive!).
@@ -36,7 +36,7 @@ Following the example from http://processingjs.org/learning/, from the **Using P
 8. Your ```test.html``` file should open up as a web page, and you should see your Processing sketch running in the web page.
   - The URL in the browser will be something like:  
     ```file:///Users/.../Desktop/pjsTest/test.html``` (it will probably be a little different on your computer).
-  - This is serving a web page locally from your own computer, because the URL starts with ```file:///``` and not ```http://```.
+  - This is serving a web page locally from your own computer, because the URL starts with ```file:///``` and not ```http://```
   - You can bookmark this URL, to make it easier to find from your web browser.
 
 ## Troubleshooting
@@ -53,7 +53,7 @@ You must be able to save your text files with **explicit** file extensions. Some
   - Your ```test.html``` web page file
   - The ```processing.min.js``` file
   3. In your web browser, look for the "Web Console" or "Developer Console", which will print out JavaScript warnings and errors.
-    - These error messages may be helpful in tracing your bug.
+  - These error messages may be helpful in tracing your bug.
   4. You may need to change the file permissions on your system (advanced and Operating System dependent)
 
 ## References
