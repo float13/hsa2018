@@ -31,6 +31,7 @@ Following the example from http://processingjs.org/learning/, from the **Using P
 ```
   - The string ```"anything.pde"``` **must** match the filename of your Processing file (case sensitive!).
   - It is very important to do this in a *plaintext* editor. and make sure the extension is exactly **test.html** and not anything like "test.html.txt" or "test.html.rtf" or anything else. 
+  - Also note that we are using ```processing.min.js``` and not ```processing.js``` from the ProcessingJS example.
 7. In your new folder, right-click on your ```test.html``` file, and try "Open with...", and then select your web browser (eg. Firefox, Safari, Chrome, Internet Explorer).
   - Depending on your computer, you may need to do "Control-click" (Mac) or "Alt-click" (Chromebook) to right-click.
 8. Your ```test.html``` file should open up as a web page, and you should see your Processing sketch running in the web page.
