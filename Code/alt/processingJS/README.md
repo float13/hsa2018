@@ -7,7 +7,7 @@
 - A text editor that can write **plaintext** files
   - **DO NOT** use a rich-text editor like Microsoft Word or Google Docs
     - On Mac, TextEdit will work, as long as it's in Plain Text mode, not Rich Text mode.
-    - On Windows, Notepad or [Notepad++] (https://notepad-plus-plus.org/)
+    - On Windows, Notepad or [Notepad++](https://notepad-plus-plus.org/)
 - You need to be able write and save files with custom extensions, like ```.html``` and ```.pde```
 
 ## Installation and Testing
