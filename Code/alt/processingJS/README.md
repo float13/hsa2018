@@ -47,11 +47,11 @@ You must be able to save your text files with **explicit** file extensions. Some
 
 #### If you open your ```test.html``` page and just see a blank page:
   1. Make sure your Processing code ```anything.pde``` is valid and working (test it with Processing)
-    - Try using the simplest example possible, or use the code from the ProcessingJS Learning example.
+  - Try using the simplest example possible, or use the code from the ProcessingJS Learning example.
   2. Make sure all 3 files are in the same folder:  
-    - Your Processing file ```anything.pde```
-    - Your ```test.html``` web page file
-    - The ```processing.min.js``` file
+  - Your Processing file ```anything.pde```
+  - Your ```test.html``` web page file
+  - The ```processing.min.js``` file
   3. In your web browser, look for the "Web Console" or "Developer Console", which will print out JavaScript warnings and errors.
     - These error messages may be helpful in tracing your bug.
   4. You may need to change the file permissions on your system (advanced and Operating System dependent)
