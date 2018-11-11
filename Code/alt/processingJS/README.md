@@ -1,6 +1,9 @@
 # ProcessingJS
 ## Run Native Processing (Java) code in a web browser
 - This can be used to execute Processing code on computers that don't support Processing (for example, Chrome).
+- It works by converting your Processing/Java code into JavaScript, which can be executed by a web browser.
+  - This makes it cross-platform, since most operating systems support web browser-based JavaScript
+  - There may be some limitations or unsupported features - see the [ProcessingJS Reference](http://processingjs.org/reference/) for details.
 
 ### Requirements
 - A web browser that supports JavaScript (eg. Firefox, Safari, Chrome, Internet Explorer)
