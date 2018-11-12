@@ -10,6 +10,9 @@ application.macosx
 # Java
 *.class
 
+# C/C++
+*.o
+
 # LaTeX
 #*.pdf
 *.aux
