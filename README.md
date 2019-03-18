@@ -15,6 +15,7 @@ Download Processing: www.processing.org
 3. Any general Java help should work for Processing.
 4. If all else fails, write down your question, and bring it to class, or send it to the mailing list.
   - Please *don't* send me technical questions directly. Send them to the whole class, so everyone can pitch in and learn.
+5. Never copy/paste code from online - always type it yourself. This helps you understand what you're writing, and also helps avoid copying the wrong thing!
 
 **NOTE:** Remember, **Java != JavaScript**  
 (Java is **_not_** the same as JavaScript so be careful when searching for help online)
